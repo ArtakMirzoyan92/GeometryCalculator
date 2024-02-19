@@ -4,7 +4,7 @@ namespace GeometryCalculator.Models
 {
     public class Circle : IShape
     {
-        public double Radius { get; set; }
+        public double Radius;
 
         public Circle(double radius)
         {
@@ -14,9 +14,7 @@ namespace GeometryCalculator.Models
             Radius = radius;
         }
 
-        public double CalculateArea()
-        {
-            return Math.PI * Math.Pow(Radius, 2);
-        }
+        public double CalculateArea() => Math.PI * Math.Pow(Radius, 2);
+       
     }
 }

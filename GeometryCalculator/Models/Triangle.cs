@@ -4,7 +4,7 @@ namespace GeometryCalculator.Models
 {
     public class Triangle : ITriangle
     {
-        double A, B, C;
+        public double A, B, C;
 
         public Triangle(double sideA, double sideB, double sideC)
         {
