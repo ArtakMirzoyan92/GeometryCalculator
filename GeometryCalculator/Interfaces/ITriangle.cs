@@ -1,6 +1,6 @@
 ﻿namespace GeometryCalculator.Interfase
 {
-    public interface ITriangle
+    public interface ITriangle : IShape
     {
         bool IsRightTriangle();
     }
