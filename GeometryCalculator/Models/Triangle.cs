@@ -4,15 +4,15 @@ namespace GeometryCalculator.Models
 {
     public class Triangle : ITriangle
     {
-        public double A, B, C;
+        public double sideA, sideB, sideC;
 
         public Triangle(double sideA, double sideB, double sideC)
         {
             ValidateSides(sideA, sideB, sideC);
 
-            A = sideA;
-            B = sideB;
-            C = sideC;
+            this.sideA = sideA;
+            this.sideB = sideB;
+            this.sideC = sideC;
         }
 
         void ValidateSides(double sideA, double sideB, double sideC)
@@ -26,13 +26,13 @@ namespace GeometryCalculator.Models
 
         public double CalculateArea()
         {
-            double P = (A + B + C) / 2;
-            return Math.Sqrt(P * (P - A) * (P - B) * (P - C));
+            double P = (sideA + sideB + sideC) / 2;
+            return Math.Sqrt(P * (P - sideA) * (P - sideB) * (P - sideC));
         }
 
         public bool IsRightTriangle()
         {
-            double[] sides = { A, B, C };
+            double[] sides = { sideA, sideB, sideC };
             Array.Sort(sides);
             return Math.Abs(Math.Pow(sides[2], 2) - (Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2))) < 0.000001;
         }
