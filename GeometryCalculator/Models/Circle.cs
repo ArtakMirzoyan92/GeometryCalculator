@@ -4,11 +4,11 @@ namespace GeometryCalculator.Models
 {
     public class Circle : IShape
     {
-        public double Radius;
+        public double Radius { get; }
 
         public Circle(double radius)
         {
-            if (radius < 0)
+            if (radius <= 0)
                 throw new ArgumentException("The radius cannot be negative.");
 
             Radius = radius;
